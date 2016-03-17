@@ -1,6 +1,6 @@
 {
   "name": "react-transform-hoc",
-  "version": "1.0.1",
+  "version": "0.0.1",
   "description": "React Transform that uses whatever Higher Order Component you provide",
   "main": "lib/index.js",
   "files": [
