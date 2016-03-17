@@ -1,5 +1,7 @@
-module.exports = () => ReactClass => {
-  const ModifiedReactClass = ReactClass;
-  ModifiedReactClass.__react_transform_noop = true;
-  return ModifiedReactClass;
+export default ({ imports }) => Component => {
+  let ret = Component;
+  for (let i = imports.length - 1; i >= 0; --i) {
+    ret = imports[i](ret);
+  }
+  return ret;
 };
