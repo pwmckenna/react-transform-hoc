@@ -1,24 +1,10 @@
-# react-transform-noop
+# react-transform-hoc
 
-This is a [react-transform](https://github.com/gaearon/babel-plugin-react-transform) that does nothing! Its just a starter kit showing how to write/test/publish a react-transform.
-
-### Features
-
-- Builds with babel 6 using the es2015 and react presets. (`npm compile`)
-- Tests with mocha (`npm test`)
-
-### Getting Started
-
-- `git clone git@github.com:pwmckenna/react-transform-noop.git`
-- `npm install`
-- edit [src/index.js](https://github.com/pwmckenna/react-transform-noop/blob/master/src/index.js#L2) to do something.
-- edit [test/index.js](https://github.com/pwmckenna/react-transform-noop/blob/master/test/index.js) to test your changes.
-- `npm test`
-- Tests pass? [change name + other package info](https://github.com/pwmckenna/react-transform-noop/blob/master/package.json#L2) + `npm publish`
+This is a [react-transform](https://github.com/gaearon/babel-plugin-react-transform) that just takes your higher order components as imports and wraps all react components with them.
 
 ### Usage
 
-There's no point in using this transform. It doesn't do anything! That being said, you can use it by updating your `.babelrc` file to look like the following. Your much fancier transform will also require something like this.
+If you want all your components to only render when props have change, you can just tell react-transform-hoc to use [recompose's `pure`](https://github.com/acdlite/recompose/blob/master/docs/API.md#pure) Higher Order Component.
 
 ```js
 {
@@ -28,7 +14,10 @@ There's no point in using this transform. It doesn't do anything! That being sai
   "plugins": [
     ["react-transform", {
       "transforms": [{
-        "transform": "react-transform-noop"
+        "transform": "react-transform-hoc",
+        "imports": [
+          "recompose/pure"
+        ]
       }]
     }]
   ]
