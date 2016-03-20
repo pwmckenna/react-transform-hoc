@@ -1,6 +1,6 @@
 # react-transform-hoc
 
-This is a [react-transform](https://github.com/gaearon/babel-plugin-react-transform) that just takes your higher order components as [imports](https://github.com/gaearon/babel-plugin-react-transform#configuration) and wraps all react components with them.
+This is a [react-transform](https://github.com/gaearon/babel-plugin-react-transform) that just takes your [higher order components](https://medium.com/@dan_abramov/mixins-are-dead-long-live-higher-order-components-94a0d2f9e750) as [imports](https://github.com/gaearon/babel-plugin-react-transform#configuration) and wraps all react components with them.
 
 ### Usage
 
