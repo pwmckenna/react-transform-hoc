@@ -24,3 +24,7 @@ If you want all your components to only render when props have change, you can j
   ]
 }
 ```
+
+### Why not?
+
+Some react-transforms use the meta data provided to do something more nuanced than just apply a HoC to every react component. Transforms like [react-transform-catch-errors](https://github.com/gaearon/react-transform-catch-errors) need to know which file they're operating on to provide quality error messages.
